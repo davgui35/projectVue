@@ -17,6 +17,9 @@
     <div class="icon" @click="menu">
       {{ textMenu }}
     </div>
+    <div class="cart-shopping">
+      <img src="../assets/img/shopping-cart.svg" alt="Icone shopping" />
+    </div>
   </div>
 </template>
 
@@ -100,11 +103,33 @@ export default {
     right: 50px;
     height: 50px;
     width: 50px;
-    border: 1px solid #333;
     line-height: 50px;
     text-align: center;
     border-radius: 50%;
     cursor: pointer;
+    &:hover {
+      transition: all 0.5s ease-in-out;
+      transform: scale(1.3);
+    }
+  }
+
+  .cart-shopping {
+    position: fixed;
+    z-index: 2;
+    background: #f1f1f1;
+    top: 110px;
+    right: 50px;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    img {
+      height: 30px;
+      position: relative;
+      top: 10px;
+      cursor: pointer;
+    }
   }
 }
 </style>
